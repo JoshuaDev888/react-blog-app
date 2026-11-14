@@ -1,0 +1,239 @@
+.header{
+  background-color: #30b022;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.header ul{
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+}
+
+.blog-post {
+  border: 1px solid #a23434;
+  padding: 100px;
+  margin-bottom: 60px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  font-family: 'Arial', sans-serif;
+    text-transform: capitalize;
+}
+
+button {
+  background-color: #30b022;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+p {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+}
+
+.footer {
+  background-color: #010700;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.contact-form, .comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+}
+.light {
+    --background: #ffffff;
+    --text: #222222;
+    --card: #f9f9f9;
+    --border-color: #dddddd;
+    --header: #30b022;
+    --header-text: #10210d;
+    --footer: #010700;
+    --link: #25851b;
+}
+
+.dark {
+    --background: #101810;
+    --text: #e5eee3;
+    --card: #1b281b;
+    --border-color: #344634;
+    --header: #1b3519;
+    --header-text: #eaffdf;
+    --footer: #080d08;
+    --link: #8be17f;
+}
+
+
+.app {
+    min-height: 100vh;
+    background-color: var(--background);
+    color: var(--text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app .header {
+    background-color: var(--header);
+    color: var(--header-text);
+}
+
+.app .header h1,
+.app .header a {
+    color: var(--header-text);
+}
+
+.app .post-card,
+.app .blog-post {
+    background-color: var(--card);
+    color: var(--text);
+    border-color: var(--border-color);
+}
+
+.app .post-card h2,
+.app .blog-post h1,
+.app .blog-post h2 {
+    color: var(--text);
+}
+
+.app .post-card a {
+    color: var(--link);
+}
+
+.app .footer {
+    background-color: var(--footer);
+    color: var(--text);
+}
+
+.app input,
+.app textarea {
+    background-color: var(--card);
+    color: var(--text);
+    border-color: var(--border-color);
+}
+
+.app .theme-toggle {
+    background-color: transparent;
+    color: var(--header-text);
+    border: 1px solid var(--header-text);
+    border-radius: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.post-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+
+    width: 100%;
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 20px;
+    align-items: stretch;
+    font-family: 'Arial', sans-serif;
+}
+
+.post-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 22px;
+
+    background-color: var(--card, #f9f9f9);
+    color: var(--text, #222);
+    border: 1px solid var(--border-color, #ddd);
+    border-radius: 8px;
+
+    overflow-wrap: anywhere;
+    transition: background-color 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.post-card h2 {
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 0 0 12px;
+    text-transform: capitalize;
+}
+
+.post-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 15px;
+    padding: 0;
+}
+
+.post-card a {
+    color: var(--link, #25851b);
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: auto;
+}
+
+.post-card a:hover {
+    text-decoration: underline;
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 30px;
+    color: var(--text, #222);
+    font-size: 16px;
+}
+
+.loading::before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    border: 3px solid var(--border-color, #ddd);
+    border-top-color: #30b022;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
