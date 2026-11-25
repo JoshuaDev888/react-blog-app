@@ -21,7 +21,7 @@ function AppContent() {
                     <Route path="/" element={<Homepage />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/posts" element={<PostList />} />
-                    <Route path="/posts/:id" element={<BlogPost />} />
+                    <Route path="/posts/:id" element={<ProtectedRoute><BlogPost /></ProtectedRoute>}/>
                     <Route path="/login" element={<Login />} />
                 </Routes>
             </div>
