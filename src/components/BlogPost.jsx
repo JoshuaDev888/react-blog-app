@@ -4,6 +4,9 @@ import {useParams} from "react-router-dom";
 import Header from "../common/Header.jsx";
 import Footer from "../common/Footer.jsx";
 import Comments from "./Comments.jsx";
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { AuthContext } from './AuthContext.jsx';
 
 function BlogPost() {
     const {id: postId} = useParams();
@@ -11,6 +14,7 @@ function BlogPost() {
     const [post, setPost] = useState(null);
     const [user, setUser] = useState(null);
     const [postComments, setPostComments] = useState([]);
+    const { user: loggedInUser } = useContext(AuthContext);
 
 
     useEffect(() => {
@@ -82,7 +86,16 @@ function BlogPost() {
                     <Comments comments={postComments} />
                 </div>
 
-                <CommentForm onSubmit={handleCommentSubmit} />
+                {loggedInUser ? (
+                    <CommentForm
+                    onSubmit={handleCommentSubmit}
+                    username={loggedInUser.username}
+                 />
+                    ) : (
+                        <p>
+                            Please <Link to="/login" className="login-button">log in</Link> to view and leave a comment.
+                        </p>
+                    )}
             </div>
 
             <Footer />

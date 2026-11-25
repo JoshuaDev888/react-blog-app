@@ -9,6 +9,11 @@
   padding: 20px 40px;
 }
 
+main {
+    min-height: 60vh;
+    margin-bottom: 40px;
+}
+
 .header ul{
   display: flex;
   flex-direction: row;
@@ -27,7 +32,7 @@
   border-radius: 5px;
   background-color: #f9f9f9;
   font-family: 'Arial', sans-serif;
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 button {
@@ -69,6 +74,7 @@ ul {
   color: white;
   text-align: center;
   padding: 20px;
+  margin: 0 auto;
   font-family: 'Arial', sans-serif;
 }
 
@@ -88,6 +94,7 @@ ul {
     --header: #30b022;
     --header-text: #10210d;
     --footer: #010700;
+    --footer-text: #ffffff;
     --link: #25851b;
 }
 
@@ -139,7 +146,7 @@ ul {
 
 .app .footer {
     background-color: var(--footer);
-    color: var(--text);
+    color: white;
 }
 
 .app input,
@@ -236,4 +243,17 @@ ul {
     to {
         transform: rotate(360deg);
     }
+}
+
+.login-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #30b022;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.login-button:hover {
+    background-color: #555;
 }
