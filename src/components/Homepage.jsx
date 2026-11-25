@@ -7,7 +7,7 @@ function Homepage() {
 	return (
 		<div>
 			<Header />
-				<div className="blog-post">
+				<div className="homepage">
 					<h1>Welcome to My Blog</h1>
 					<p>
         Welcome! I'm glad you stopped by. This blog is a place to share

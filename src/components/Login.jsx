@@ -30,34 +30,34 @@ export default function Login() {
         <div>
             <Header />
 
-            <main className="login-page">
-                <section className="login-card">
-                    <h1>Welcome back</h1>
-                    <p>Sign in to continue reading and commenting.</p>
+                <main className="login-page">
+                    <section className="login-card">
+                        <h1>Welcome back</h1>
+                        <p>Sign in to continue reading and commenting.</p>
 
-                    <form onSubmit={handleSubmit}>
-                        <label>Username</label>
-                        <input
-                            type="text"
-                            value={username}
-                            onChange={(event) => setUsername(event.target.value)}
-                            required
-                        />
+                        <form onSubmit={handleSubmit}>
+                            <label>Username</label>
+                            <input
+                                type="text"
+                                value={username}
+                                onChange={(event) => setUsername(event.target.value)}
+                                required
+                            />
 
-                        <label>Password</label>
-                        <input
-                            type="password"
-                            value={password}
-                            onChange={(event) => setPassword(event.target.value)}
-                            required
-                        />
+                            <label>Password</label>
+                            <input
+                                type="password"
+                                value={password}
+                                onChange={(event) => setPassword(event.target.value)}
+                                required
+                            />
 
-                        <button type="submit">Log in</button>
+                            <button type="submit">Log in</button>
 
-                        {message && <p>{message}</p>}
-                    </form>
-                </section>
-            </main>
+                            {message && <p>{message}</p>}
+                        </form>
+                    </section>
+                </main>
 
             <Footer />
         </div>
